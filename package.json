@@ -1,0 +1,161 @@
+{
+  "name": "functionstein",
+  "version": "1.0.8",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "description": "Creating the monster. Weird collection of useful functions I often need.",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.4so.local:fourseasons/scipo-taskboard.git"
+  },
+  "keywords": [
+    "helpers",
+    "functions"
+  ],
+  "bugs": {
+    "url": "https://github.com/on3iro/functionStein/issues"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "flow": "flow",
+    "lint": "standard --parser babel-eslint",
+    "lint:fix": "standard --parser babel-eslint --fix",
+    "test:clean": "rimraf ./coverage",
+    "pretest": "npm run test:clean",
+    "test": "cross-env NODE_ENV=test jest --verbose",
+    "test:coverage": "cross-env NODE_ENV=test jest --coverage",
+    "test:watch": "cross-env NODE_ENV=test jest --watch",
+    "coveralls": "cross-env NODE_ENV=test jest --coverage --runInBand && cat ./coverage/lcov.info | coveralls"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions"
+            ]
+          },
+          "modules": false
+        }
+      ],
+      "flow",
+      "stage-3"
+    ],
+    "env": {
+      "commonjs": {
+        "presets": [
+          [
+            "env",
+            {
+              "useBuiltIns": false
+            }
+          ]
+        ]
+      },
+      "es": {
+        "presets": [
+          [
+            "env",
+            {
+              "useBuiltIns": false,
+              "modules": false
+            }
+          ]
+        ]
+      },
+      "test": {
+        "presets": [
+          [
+            "env",
+            {
+              "targets": {
+                "browsers": [
+                  "last 2 versions"
+                ]
+              },
+              "modules": "commonjs"
+            }
+          ],
+          "flow",
+          "stage-3"
+        ],
+        "plugins": []
+      }
+    }
+  },
+  "jest": {
+    "modulePaths": [
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "collectCoverageFrom": [
+      "**/src/**/*.{js}"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpeg|jpg|png|gif|eot|webp|svg|ttf|woff2|mp3|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": "flowtype",
+    "ignore": [
+      "**/dist/",
+      "**/flow-typed"
+    ],
+    "globals": [
+      "jest",
+      "describe",
+      "it",
+      "expect",
+      "HTMLElement"
+    ]
+  },
+  "license": "MIT",
+  "private": false,
+  "author": {
+    "name": "Theo Salzmann",
+    "email": "dev@on3iro.de"
+  },
+  "contributors": [],
+  "homepage": "https://github.com/on3iro/functionStein",
+  "dependencies": {},
+  "engines": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-jest": "^22.0.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "coveralls": "^3.0.0",
+    "cross-env": "^5.1.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-flowtype": "^2.40.1",
+    "flow-bin": "^0.56.0",
+    "jest": "^22.0.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.53.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "standard": "^10.0.3",
+    "uglify-es": "^3.3.2"
+  }
+}
