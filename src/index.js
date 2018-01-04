@@ -1,10 +1,6 @@
 // @flow
 
 /**
-  * @module functionstein
-  */
-
-/**
  * Given a string containing markup renders the markup into a
  * React component. This needs to be called inside the
  * 'dangerouslySetInnerHTML' prop to work.
