@@ -1,6 +1,6 @@
 {
   "name": "functionstein",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": [
@@ -30,7 +30,8 @@
     "test": "cross-env NODE_ENV=test jest --verbose",
     "test:coverage": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
-    "coveralls": "cross-env NODE_ENV=test jest --coverage --runInBand && cat ./coverage/lcov.info | coveralls"
+    "test:coveralls": "cross-env NODE_ENV=test jest --coverage --runInBand && cat ./coverage/lcov.info | coveralls",
+    "docs": "jsdoc src -r -c jsdoc.conf.json -d docs -R README.md"
   },
   "babel": {
     "presets": [
@@ -115,7 +116,8 @@
     "plugins": "flowtype",
     "ignore": [
       "**/dist/",
-      "**/flow-typed"
+      "**/flow-typed",
+      "**/docs"
     ],
     "globals": [
       "jest",
@@ -148,6 +150,8 @@
     "eslint-plugin-flowtype": "^2.40.1",
     "flow-bin": "^0.56.0",
     "jest": "^22.0.1",
+    "jsdoc": "^3.5.5",
+    "jsdoc-babel": "^0.3.0",
     "rimraf": "^2.6.2",
     "rollup": "^0.53.0",
     "rollup-plugin-babel": "^3.0.3",
