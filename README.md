@@ -22,7 +22,7 @@ Small toolbelt of functions (personal alternative for lodash/ramda inside small 
 
 ## API
 
-[API](on3iro.github.io/functionstein)
+[API](https://on3iro.github.io/functionstein)
 
 ## FAQ
 
