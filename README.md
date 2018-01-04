@@ -1,8 +1,13 @@
+[![Build Status](https://travis-ci.org/on3iro/functionstein.svg?branch=master)](https://travis-ci.org/on3iro/functionstein)
+[![Coverage Status](https://coveralls.io/repos/github/on3iro/functionstein/badge.svg?branch=master)](https://coveralls.io/github/on3iro/functionstein?branch=master)
 [![npm version](https://badge.fury.io/js/functionstein.svg)](https://badge.fury.io/js/functionstein)
+
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 <!-- vim-markdown-toc GFM -->
 
 * [functionstein](#functionstein)
+    * [API](#api)
     * [FAQ](#faq)
         * [What is functionstein?](#what-is-functionstein)
         * [Should I use this?](#should-i-use-this)
@@ -13,6 +18,11 @@
 # functionstein
 
 Small toolbelt of functions (personal alternative for lodash/ramda inside small projects)
+
+
+## API
+
+[API](on3iro.github.io/functionstein)
 
 ## FAQ
 
