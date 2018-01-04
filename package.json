@@ -30,7 +30,7 @@
     "test": "cross-env NODE_ENV=test jest --verbose",
     "test:coverage": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
-    "coveralls": "cross-env NODE_ENV=test jest --coverage --runInBand && cat ./coverage/lcov.info | coveralls",
+    "test:coveralls": "cross-env NODE_ENV=test jest --coverage --runInBand && cat ./coverage/lcov.info | coveralls",
     "docs": "jsdoc src -r -c jsdoc.conf.json -d docs -R README.md"
   },
   "babel": {
@@ -116,7 +116,8 @@
     "plugins": "flowtype",
     "ignore": [
       "**/dist/",
-      "**/flow-typed"
+      "**/flow-typed",
+      "**/docs"
     ],
     "globals": [
       "jest",
