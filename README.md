@@ -44,7 +44,7 @@ wont fit your needs and you are better off with another library like [Lodash](ht
 or [Ramda](http://ramdajs.com/). **functionsteins** collection of functions might seem rather random at
 times and I don't give any guarantees about the implementation of each function.
 
-However if you are working on a small project and **functionstein** fits you can use it, ofcourse.
+However if you are working on a small project and **functionstein** fits you can use it ofcourse.
 For anything that goes to production I would recommend one of the aforementioned libraries or
 to create a personal fork of **functionstein**.
 
@@ -52,6 +52,6 @@ to create a personal fork of **functionstein**.
 ### Isn't there anything better that we could do with this name?
 
 Absolutely. I really liked the name when it came to my mind and it still seems to fit
-the purpose of this library. It is not set in stone, though. If you have a great library idea that would fit the name
+the purpose of this library. Nothing is set in stone, though. If you have a great library idea that would fit the name
 better and would be more useful to others I would definitely be open to switch the purpose of the lib.
 Just hit me up and open an issue where we could discuss this.
