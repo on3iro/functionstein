@@ -8,6 +8,8 @@
 <!-- vim-markdown-toc GFM -->
 
 * [functionstein](#functionstein)
+    * [Installation](#installation)
+    * [Usage](#usage)
     * [API](#api)
     * [FAQ](#faq)
         * [What is functionstein?](#what-is-functionstein)
@@ -19,6 +21,20 @@
 # functionstein
 
 Small toolbelt of functions (personal alternative for lodash/ramda inside small projects)
+
+
+## Installation
+
+`npm i functionstein`
+
+
+## Usage
+
+Simply import the functions you need like this:
+
+```js
+import { first } from 'functionstein'
+```
 
 
 ## API
