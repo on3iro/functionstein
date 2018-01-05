@@ -31,7 +31,8 @@
     "test:coverage": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "test:coveralls": "cross-env NODE_ENV=test jest --coverage --runInBand && cat ./coverage/lcov.info | coveralls",
-    "docs": "jsdoc src -r -c jsdoc.conf.json -d docs -R README.md"
+    "docs": "jsdoc src -r -c jsdoc.conf.json -d docs -R README.md",
+    "precommit": "npm run docs && git add ."
   },
   "babel": {
     "presets": [
@@ -149,6 +150,7 @@
     "eslint-loader": "^1.9.0",
     "eslint-plugin-flowtype": "^2.40.1",
     "flow-bin": "^0.56.0",
+    "husky": "^0.14.3",
     "jest": "^22.0.1",
     "jsdoc": "^3.5.5",
     "jsdoc-babel": "^0.3.0",
