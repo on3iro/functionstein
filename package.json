@@ -20,6 +20,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
+    "prebublish": "npm run build",
     "prebuild": "npm run clean",
     "build": "cross-env NODE_ENV=production rollup -c",
     "flow": "flow",
