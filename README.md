@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/on3iro/functionstein.svg?branch=master)](https://travis-ci.org/on3iro/functionstein)
 [![Coverage Status](https://coveralls.io/repos/github/on3iro/functionstein/badge.svg?branch=master)](https://coveralls.io/github/on3iro/functionstein?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/704d27c79031519e33cb/maintainability)](https://codeclimate.com/github/on3iro/functionstein/maintainability)
 [![npm version](https://badge.fury.io/js/functionstein.svg)](https://badge.fury.io/js/functionstein)
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
@@ -44,7 +45,7 @@ wont fit your needs and you are better off with another library like [Lodash](ht
 or [Ramda](http://ramdajs.com/). **functionsteins** collection of functions might seem rather random at
 times and I don't give any guarantees about the implementation of each function.
 
-However if you are working on a small project and _functionstein_ fits you can use it, ofcourse.
+However if you are working on a small project and _functionstein_ fits you can use it ofcourse.
 For anything that goes to production I would recommend one of the aforementioned libraries or
 to create a personal fork of _functionstein_.
 

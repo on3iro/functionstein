@@ -33,10 +33,11 @@ export const sortByProperty = (
   const bHasProperty = typeof b[property] !== 'undefined'
 
   const aIsSmaller = a[property] < b[property]
+
   if (
     aIsSmaller ||
     (aHasProperty && !bHasProperty)
-) return -order
+  ) return -order
 
   const aIsLarger = a[property] > b[property]
   if (
