@@ -220,3 +220,55 @@ export const immutablyDeleteProperty = (obj: Object, property: string): Object =
       return { ...acc, [k]: obj[k] }
     }, {})
 }
+
+
+/**
+ * Reduces multiple function calls, which are fired in quick succession to
+ * a single function call (i.e. to reduce function calls on scroll events.
+ * @function debounce
+ * @param {function} fn - Function to debounce
+ * @param {number} time - Time to wait until function is called - will be reset
+ * on every invocation of the debounced function in the given timeframe.
+ * @return {function} Debounced function
+  */
+export const debounce = (fn: Function, time: number): Function => {
+  let timeout
+
+  // Has to be a 'real' function, not an arrow function, to preserve
+  // context of 'this'
+  return function (...args: Array<mixed>) {
+    const callback = () => fn.apply(this, args)
+
+    clearTimeout(timeout)
+    timeout = setTimeout(callback, time)
+  }
+}
+
+/**
+ * Makes sure that a given function is only called once in a specified
+ * timeframe.
+ * @function throttle
+ * @param {function} fn - Function to call after timeout
+ * @param {number} time - Timeout in ms
+ * @param {object} context - Useful for throttling object methods
+ * @return {function} Throttled function
+  */
+export const throttle = (fn: Function, time: number, context: Object = this): Function => {
+  let timeout
+  let callbackArgs
+
+  const callback = () => {
+    fn.apply(context, callbackArgs)
+    clearTimeout(timeout)
+    timeout = undefined
+  }
+
+  // Has to be a 'real' function, not an arrow function, to preserve
+  // context of 'this'
+  return function (...args: Array<mixed>) {
+    if (timeout) return
+
+    callbackArgs = args
+    timeout = setTimeout(callback, time)
+  }
+}
