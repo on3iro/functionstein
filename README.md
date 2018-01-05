@@ -39,14 +39,14 @@ to add the footprint of _lodash_ or similar libraries.
 
 **Short Answer:** Probably not!
 
-**Long Answer:** You technically could, but it is pretty likely that **functionstein**
+**Long Answer:** You technically could, but it is pretty likely that _functionstein_
 wont fit your needs and you are better off with another library like [Lodash](https://lodash.com/)
 or [Ramda](http://ramdajs.com/). **functionsteins** collection of functions might seem rather random at
 times and I don't give any guarantees about the implementation of each function.
 
-However if you are working on a small project and **functionstein** fits you can use it ofcourse.
+However if you are working on a small project and _functionstein_ fits you can use it, ofcourse.
 For anything that goes to production I would recommend one of the aforementioned libraries or
-to create a personal fork of **functionstein**.
+to create a personal fork of _functionstein_.
 
 
 ### Isn't there anything better that we could do with this name?
