@@ -221,7 +221,6 @@ export const immutablyDeleteProperty = (obj: Object, property: string): Object =
     }, {})
 }
 
-
 /**
  * Reduces multiple function calls, which are fired in quick succession to
  * a single function call (i.e. to reduce function calls on scroll events.
