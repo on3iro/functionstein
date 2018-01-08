@@ -1,4 +1,4 @@
-import { partial } from 'partial'
+import { partial } from '../partial'
 
 describe('partial()', () => {
   it('should partially apply argument and return function expecting on less arg', () => {

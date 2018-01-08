@@ -1,4 +1,4 @@
-import { insertInObjIf } from 'insertInObjIf'
+import { insertInObjIf } from '../insertInObjIf'
 
 describe('insertInObjIf', () => {
   it('should return spreadable object with property only if condition is true', () => {

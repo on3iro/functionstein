@@ -1,4 +1,4 @@
-import { compactArray } from 'compactArray'
+import { compactArray } from '../compactArray'
 
 describe('compactArray()', () => {
   it('should remove undefined and null values', () => {

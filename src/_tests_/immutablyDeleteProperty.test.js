@@ -1,4 +1,4 @@
-import { immutablyDeleteProperty } from 'immutablyDeleteProperty'
+import { immutablyDeleteProperty } from '../immutablyDeleteProperty'
 
 describe('immutablyDeleteProperty()', () => {
   const obj = {

@@ -19,3 +19,5 @@ export const compactArray = <T>(arr: Array<?T>): Array<T> => {
 
   return result
 }
+
+export default compactArray

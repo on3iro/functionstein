@@ -1,4 +1,4 @@
-import { range } from 'range'
+import { range } from '../range'
 
 describe('range()', () => {
   it('should create array of numbers in range', () => {

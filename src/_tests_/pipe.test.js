@@ -1,4 +1,4 @@
-import { pipe } from 'pipe'
+import { pipe } from '../pipe'
 
 describe('pipe()', () => {
   it('should combine multiple functions into one', () => {

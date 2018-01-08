@@ -1,4 +1,7 @@
 {
+  "source": {
+    "excludePattern": "_tests_"
+  },
   "plugins": [
     "node_modules/jsdoc-babel"
   ]

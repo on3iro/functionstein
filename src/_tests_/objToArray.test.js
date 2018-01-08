@@ -1,4 +1,4 @@
-import { objToArray } from 'objToArray'
+import { objToArray } from '../objToArray'
 
 describe('objToArray()', () => {
   it('should return an array of object values', () => {

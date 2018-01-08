@@ -1,6 +1,6 @@
 {
   "name": "functionstein",
-  "version": "1.6.1",
+  "version": "1.6.2-0",
   "main": "lib/index.js",
   "module": "es/index.js",
   "jsnext:main": "es/index/js",
@@ -41,7 +41,7 @@
     "test:coverage": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "test:coveralls": "cross-env NODE_ENV=test jest --coverage --runInBand && cat ./coverage/lcov.info | coveralls",
-    "docs": "jsdoc src -r -c jsdoc.conf.json -d docs -R README.md",
+    "docs": "cross-env BABEL_ENV=es jsdoc src -r -c jsdoc.conf.json -d docs -R README.md",
     "precommit": "npm run docs && git add ."
   },
   "jest": {
@@ -88,7 +88,9 @@
   },
   "contributors": [],
   "homepage": "https://github.com/on3iro/functionStein",
-  "dependencies": {},
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  },
   "engines": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -107,6 +109,7 @@
     "jest": "^22.0.1",
     "jsdoc": "^3.5.5",
     "jsdoc-babel": "^0.3.0",
+    "regenerator-runtime": "^0.11.1",
     "rimraf": "^2.6.2",
     "rollup": "^0.53.0",
     "rollup-plugin-babel": "^3.0.3",
