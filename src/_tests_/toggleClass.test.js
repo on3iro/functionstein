@@ -1,19 +1,38 @@
-// @flow
+import { toggleClass } from '../toggleClass'
 
-/**
-  * Toggles the class on a DOM node by a given condition
-  * @function toggleClass
-  * @param {HTMLElement} node - Domnode to add/remove class to/from
-  * @param {string} className - Class to add/remove
-  * @param {boolean} condition - Expression that resolves to true/false
-  * @return {void}
-  */
-export const toggleClass = (
-  node: HTMLElement,
-  className: string,
-  condition: boolean
-): void => {
-  condition
-    ? node.classList.add(className)
-    : node.classList.remove(className)
-}
+describe('toggleClass()', () => {
+  const setUp = (nodeOw, className = 'any-class', condition = true) => {
+    const add = jest.fn()
+    const remove = jest.fn()
+
+    const node = {
+      classList: {
+        add,
+        remove
+      },
+      ...nodeOw
+    }
+
+    toggleClass(node, className, condition)
+
+    return {
+      add,
+      remove,
+      className
+    }
+  }
+
+  it('should call node.classList.add() with className if condition is true', () => {
+    const { add, remove, className } = setUp()
+
+    expect(add).toHaveBeenCalledWith(className)
+    expect(remove).toHaveBeenCalledTimes(0)
+  })
+
+  it('should call node.classList.remove() with className if condition is false', () => {
+    const { add, remove, className } = setUp(null, 'any-class', false)
+
+    expect(remove).toHaveBeenCalledWith(className)
+    expect(add).toHaveBeenCalledTimes(0)
+  })
+})
