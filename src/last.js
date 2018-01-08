@@ -1,6 +1,6 @@
 // @flow
 
-import { first } from 'first'
+import { first } from './first'
 
 /**
   * Returns the last element of an array

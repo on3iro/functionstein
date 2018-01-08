@@ -4,39 +4,43 @@
       "ignore": [
         "**/*.test.js"
       ],
-      "presets": [[
-        "env",
-      {
-        "modules": false
-      }
-      ],
-      "flow",
-      "stage-3"
+      "presets": [
+        [
+          "env",
+          {
+            "useBuiltIns": false,
+            "modules": false
+          }
+        ],
+        "flow",
+        "stage-3"
       ]
     },
     "commonjs": {
       "ignore": [
         "**/*.test.js"
       ],
-      "presets": [[
-        "env",
-      {
-        "modules": "commonjs"
-      }
-      ],
-      "flow",
-      "stage-3"
+      "presets": [
+        [
+          "env",
+          {
+            "useBuiltIns": false
+          }
+        ],
+        "flow",
+        "stage-3"
       ]
     },
     "test": {
-      "presets": [[
-        "env",
-      {
-        "modules": "commonjs"
-      }
-      ],
-      "flow",
-      "stage-3"
+      "presets": [
+        [
+          "env",
+          {
+            "modules": "commonjs"
+          }
+        ],
+        "flow",
+        "stage-3"
       ]
     }
   }
