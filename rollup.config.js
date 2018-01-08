@@ -1,28 +1,31 @@
 /* eslint-disable flowtype/require-valid-file-annotation */
 
 import babel from 'rollup-plugin-babel'
-// import uglify from 'rollup-plugin-uglify'
-// import { minify } from 'uglify-es'
+import uglify from 'rollup-plugin-uglify'
+import replace from 'rollup-plugin-replace'
 
-export default {
-  input: 'src/index.js',
-  output: [
-    {
-      file: 'dist/index.es.js',
-      format: 'es'
-    },
-    {
-      file: 'dist/index.js',
-      format: 'umd'
-    }
-  ],
+const env = process.env.NODE_ENV
+
+const config = {
+  output: {
+    format: 'umd'
+  },
   name: 'functionstein',
   plugins: [
-    babel({ exclude: 'node_modules/**' })
-    // uglify({}, minify)
-  ].concat(
-  ),
-  sourceMap: false,
-  external: [],
-  globals: {}
+    babel({
+      exclude: 'node_modules/**',
+      plugins: ['external-helpers']
+    }),
+    replace({
+      'process.env.NODE_ENV': JSON.stringify(env)
+    })
+  ]
 }
+
+if (env === 'production') {
+  config.plugins.push(
+    uglify({})
+  )
+}
+
+export default config

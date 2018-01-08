@@ -1,0 +1,39 @@
+{
+    "ignore": [
+        "**/*.test.js"
+    ],
+    "presets": [
+      [
+        "env",
+        {
+            "modules": false
+        }
+      ],
+      "flow",
+      "stage-3"
+    ],
+    "env": {
+      "commonjs": {
+        "presets": [
+          [
+            "env",
+            {
+              "modules": "commonjs"
+            }
+          ]
+        ]
+      },
+      "test": {
+        "presets": [
+          [
+            "env",
+            {
+              "modules": "commonjs"
+            }
+          ],
+          "flow",
+          "stage-3"
+        ]
+      }
+    }
+}
