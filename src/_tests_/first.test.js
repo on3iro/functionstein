@@ -1,4 +1,4 @@
-import { first } from 'first'
+import { first } from '../first'
 
 describe('first()', () => {
   it('should return first element of an array', () => {

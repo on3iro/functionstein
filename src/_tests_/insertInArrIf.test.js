@@ -1,4 +1,4 @@
-import { insertInArrIf } from 'insertInArrIf'
+import { insertInArrIf } from '../insertInArrIf'
 
 describe('insertInArrIf()', () => {
   it('should return spreadable array with value only if condition is true', () => {

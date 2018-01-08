@@ -18,7 +18,7 @@ indent_size = 2
 [*.md]
 trim_trailing_whitespace = false
 
-[{*.json,.gitlab-ci.yml}]
+[{*.json,.gitlab-ci.yml,.*rc}]
 # The indent size used in the `package.json` file cannot be changed
 # https://github.com/npm/npm/pull/3180#issuecomment-16336516
 indent_size = 2

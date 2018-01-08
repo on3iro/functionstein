@@ -1,4 +1,4 @@
-import { objArrayToKeyedObj } from 'objArrayToKeyedObj'
+import { objArrayToKeyedObj } from '../objArrayToKeyedObj'
 
 describe('objArrayToKeyedObj()', () => {
   it('should transform an array of objects into an object containing these objects by a respective key', () => {
