@@ -1,6 +1,6 @@
 {
   "name": "functionstein",
-  "version": "1.6.2-2",
+  "version": "1.7.0",
   "main": "lib/index.js",
   "module": "es/index.js",
   "jsnext:main": "es/index/js",

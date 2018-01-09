@@ -6,7 +6,6 @@
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 <!-- vim-markdown-toc GFM -->
-
 * [functionstein](#functionstein)
     * [Installation](#installation)
     * [Usage](#usage)
@@ -25,7 +24,7 @@ Small toolbelt of functions (personal alternative for lodash/ramda inside small 
 
 ## Installation
 
-`npm i functionstein`
+`npm i --save functionstein`
 
 
 ## Usage
